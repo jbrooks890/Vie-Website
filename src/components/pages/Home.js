@@ -15,7 +15,11 @@ export default function Home() {
 
   useEffect(() => fetchMd(), []);
   return (
-    <Page name="home" className="flex col">
+    <Page
+      name="home"
+      className="flex col"
+      banner={require("../../assets/images/VIE-BG-3.jpg")}
+    >
       <Section name="Fish">
         {postContent ? <Markdown>{postContent}</Markdown> : <h3>Loading...</h3>}
       </Section>

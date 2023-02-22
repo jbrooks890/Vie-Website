@@ -6,12 +6,15 @@ export default function Section({
   name = id,
   className,
   type = "regular",
+  layout = "cascade",
   banner,
   theme,
 }) {
   return (
     <section
-      id={`${name.toLowerCase().replaceAll(" ", "-").trim()}-page ${id ?? ""}`}
+      id={`${name.toLowerCase().replaceAll(" ", "-").trim()}-section ${
+        id ?? ""
+      }`}
       className={`${className ?? ""} ${
         banner ? ("banner", banner) : "no-banner"
       } ${theme ? ("theme", theme) : "no-theme"}`}

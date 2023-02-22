@@ -20,5 +20,5 @@ export default function Nav() {
     });
   };
 
-  return <nav className="flex middle">{renderNav(mainNav)}</nav>;
+  return <nav className="flex middle theme">{renderNav(mainNav)}</nav>;
 }

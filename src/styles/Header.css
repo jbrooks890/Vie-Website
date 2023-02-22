@@ -1,0 +1,5 @@
+header {
+  position: absolute !important;
+  inset: .5em .5em auto;
+  z-index: 1000;
+}
