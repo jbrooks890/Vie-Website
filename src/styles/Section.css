@@ -1,0 +1,12 @@
+section {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+section:not(.full-width){
+  max-width: calc(var(--grid)*32);
+}
+
+.flex section:not(.full-width) {
+  align-self: center;
+}

@@ -1,0 +1,44 @@
+/* header nav.flex {
+  align-self: center;
+  border: 1px solid orange
+} */
+nav {
+  margin-block: .5rem 1rem;
+  padding: .5em;
+  background-color: var(--pop);
+  color: var(--dark);
+  /* font-family: var(--numFont); */
+  font-weight: 500;
+  box-sizing: border-box;
+  /* border: 1px solid orange; */
+  border-radius: var(--outside);
+}
+
+nav a {
+  padding: .5em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  font-size: smaller;
+  line-height: 1em;
+  letter-spacing: 1px;
+  transition: .1s ease-out;
+}
+
+nav a.active {
+  cursor: default;
+  color: var(--pop-alt)
+}
+
+nav a:not(:last-of-type) {
+  margin-right: 1em;
+}
+/* ----------------------------------------- **
+** ================\ HOVER /================ **
+** ----------------------------------------- */
+
+@media(hover:hover){
+  nav a:not(.active):hover {
+    color: var(--pop-alt);
+    text-shadow: 1px 1px 3px var(--faint);
+  }
+}
