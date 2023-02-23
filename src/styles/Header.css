@@ -1,5 +1,8 @@
 header {
   position: absolute !important;
-  inset: .5em .5em auto;
+  inset: 0 0 auto;
+  height: var(--header-size);
+  /* border: 1px solid red; */
+  box-sizing: border-box;
   z-index: 1000;
 }

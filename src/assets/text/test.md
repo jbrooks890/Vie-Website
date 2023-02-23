@@ -1,6 +1,4 @@
-# Vie the Game
-
-## Battle for the Crown
+# Battle for the Crown
 
 ### Build your army. Conquer your opponent.
 

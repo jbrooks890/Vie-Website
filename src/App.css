@@ -8,13 +8,18 @@
   src: url(/src/assets/fonts/MinionVariableConcept-Roman.otf);
 }
 
+@font-face {
+  font-family: Abel;
+  src: url(/src/assets/fonts/Abel-Regular.ttf);
+}
+
 :root {
   --grid: 32px;
   /* ---------- COLORS ---------- */
   --blue: #2e2e47;
   --gold: #ff9f7d;
   --purple: #896883;
-  --purple2: hsl(311, 35%, 50%);
+  --purple2: hsl(310, 50%, 60%);
   /* ---------------------------- */
   --lite: white;
   --brite: var(--gold);
@@ -23,13 +28,16 @@
   --mid: var(--gold);
   --dark: var(--blue);
   --darker: black;
+  --drop-shadow: rgba(0,0,0,0.5);
   --shadow: rgba(0, 0, 0, 0.1);
   --faint: rgba(0, 0, 0, 0.05);
   /* ---------- FONTS ---------- */
   --keyFont: Minion-VC;
   --numFont: Bernard-MT-Condensed;
-  --bodyFont: Calibri;
-  font-size: 18px;
+  --bodyFont: Abel;
+  /* --------------------------- */
+  /* font-family: var(--bodyFont); */
+  font-size: 21px;
   /* ---------- BORDERS ---------- */ 
   --outside: 10px;
   --inside: 5px;
@@ -42,6 +50,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--dark);
+  font-family: var(--bodyFont);
   /* background-color: var(--blue);
   color: var(--lite); */
 }
@@ -89,11 +98,19 @@ h1, h2 {
   color: var(--pop);
   font-family: var(--keyFont);
   font-variant: small-caps;
-  font-weight: normal;
   text-shadow: 1px 1px 3px var(--faint);
 }
 
-h1 {font-size: 42px}
+h1 {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
 
 /* ====== FLEX ====== */
 
@@ -118,7 +135,7 @@ h1 {font-size: 42px}
 }
 
 .flex.middle {
-  justify-content: center;
+  align-items: center;
 }
 
 .flex.end {
@@ -197,6 +214,9 @@ h1 {font-size: 42px}
   mix-blend-mode: overlay;
   opacity: .5;
 }
+
+/* ====== IMAGES ====== */
+
 
 /* ====== BANNERS ====== */
 .banner-img-wrap {

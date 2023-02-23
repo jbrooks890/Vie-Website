@@ -15,9 +15,11 @@ export default function Section({
       id={`${name.toLowerCase().replaceAll(" ", "-").trim()}-section ${
         id ?? ""
       }`}
-      className={`${className ?? ""} ${
-        banner ? ("banner", banner) : "no-banner"
-      } ${theme ? ("theme", theme) : "no-theme"}`}
+      className={`${className ?? ""} ${banner ? "with-banner" : "no-banner"} ${
+        theme ? ("theme", theme) : "no-theme"
+      }`}
+      data-banner-src={banner ?? undefined}
+      style={banner ? { backgroundImage: `url(${banner})` } : undefined}
     >
       {children}
     </section>

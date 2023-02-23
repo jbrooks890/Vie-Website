@@ -10,15 +10,14 @@ export default function Page({
   banner,
   theme,
 }) {
-  console.log({ children });
+  // console.log({ children });
   return (
     <div
       id={`${name.toLowerCase().replaceAll(" ", "-").trim()}-page ${id ?? ""}`}
-      className={`${className ?? ""} ${banner ? "with-banner" : "no-banner"} ${
+      className={`page ${type} ${banner ? "with-banner" : "no-banner"} ${
         theme ? ("theme", theme) : "no-theme"
-      }`}
+      } ${className ?? ""}`}
     >
-      {banner ? <Banner src={banner} /> : null}
       {children}
     </div>
   );

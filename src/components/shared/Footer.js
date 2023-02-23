@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="theme glass-bg">
       <span className="copyright">
-        &copy;2023 Vie: The Game by Julian Brooks. All rights reserved.
+        &copy;2023 Vie&trade; by Julian Brooks. All rights reserved.
       </span>
       <Icons />
     </footer>

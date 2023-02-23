@@ -3,10 +3,21 @@ section {
   box-sizing: border-box;
 }
 
-section:not(.full-width){
+section:not(.full-width):not(.with-banner){
   max-width: calc(var(--grid)*32);
 }
 
-.flex section:not(.full-width) {
+.flex section:not(.full-width):not(.with-banner) {
   align-self: center;
+}
+
+section.with-banner {
+  --img-src: attr(data-banner-src);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-image: url(var(--img-src)); */
+}
+
+main section:first-of-type {
+  padding-block: var(--header-size);
 }

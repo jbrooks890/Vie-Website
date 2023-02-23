@@ -1,16 +1,15 @@
-/* header nav.flex {
-  align-self: center;
-  border: 1px solid orange
-} */
 nav {
-  margin-block: .5rem 1rem;
-  padding: .5em;
-  background-color: var(--pop);
-  color: var(--dark);
+  margin-block: 1rem;
+  padding: .5em 1em;
+  background-color: var(--dark);
+  color: var(--pop);
   /* font-family: var(--numFont); */
   font-weight: 500;
   box-sizing: border-box;
   /* border: 1px solid orange; */
+  border: 3px groove var(--pop);
+  box-shadow: 5px px 5px var(--drop-shadow);
+  box-sizing: border-box;
   border-radius: var(--outside);
 }
 
@@ -25,13 +24,31 @@ nav.theme::before {
 }
 
 nav a {
-  padding: .5em;
+  position: relative;
+  padding: .5em 1.5em;
   text-transform: uppercase;
   font-variant: small-caps;
   font-size: smaller;
   line-height: 1em;
   letter-spacing: 1px;
+  /* border-inline: 1.5px inset silver; */
   transition: .1s ease-out;
+}
+
+nav a::before {
+  content:"";
+  position: absolute;
+  inset: 0;
+  border-block: 3px solid transparent;
+  mix-blend-mode: soft-light;
+  opacity: .5;
+}
+
+nav a:not(:first-of-type)::before {
+  border-left: 1.5px inset gray;
+}
+nav a:not(:last-of-type)::before {
+  border-right: 1.5px inset silver;
 }
 
 nav a.active {
@@ -39,9 +56,9 @@ nav a.active {
   color: var(--pop-alt)
 }
 
-nav a:not(:last-of-type) {
+/* nav a:not(:last-of-type) {
   margin-right: 1em;
-}
+} */
 /* ----------------------------------------- **
 ** ================\ HOVER /================ **
 ** ----------------------------------------- */

@@ -18,8 +18,19 @@ export default function Home() {
     <Page
       name="home"
       className="flex col"
-      banner={require("../../assets/images/VIE-BG-3.jpg")}
+      // banner={require("../../assets/images/VIE-BG-3.jpg")}
     >
+      <Section
+        name="Welcome"
+        type="banner"
+        banner={require("../../assets/images/VIE-BG-3.jpg")}
+      >
+        <img
+          src={require("../../assets/images/VIE-Logo2.png")}
+          alt="vie-logo"
+          style={{ height: "480px" }}
+        />
+      </Section>
       <Section name="Fish">
         {postContent ? <Markdown>{postContent}</Markdown> : <h3>Loading...</h3>}
       </Section>
