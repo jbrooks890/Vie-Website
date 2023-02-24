@@ -15,6 +15,7 @@
 
 :root {
   --grid: 32px;
+  --frame: 1024px;
   /* ---------- COLORS ---------- */
   --blue: #2e2e47;
   --gold: #ff9f7d;
@@ -42,6 +43,8 @@
   --outside: 10px;
   --inside: 5px;
   /* ---------- GRAPHICS ---------- */
+  --checker-bg: url(/src/assets/images/checker-pattern-SIMPLE.jpg);
+  --glass-bg: url(/src/assets/images/Card-Base-Texture.jpg);
   /* ---------- HEADER ---------- */
   --header-size: 5rem;
 }
@@ -97,19 +100,32 @@ a:focus, a:hover {
 h1, h2 {
   color: var(--pop);
   font-family: var(--keyFont);
+  font-weight: 500;
   font-variant: small-caps;
-  text-shadow: 1px 1px 3px var(--faint);
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px var(--drop-shadow);
 }
 
 h1 {
-  font-size: 42px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 h3 {
   font-weight: normal;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px var(--drop-shadow);;
+}
+
+/* ====== SEMANTICS ====== */
+
+em {
+  font-style: normal;
+  color: var(--pop);
 }
 
 /* ====== FLEX ====== */
@@ -147,7 +163,7 @@ h3 {
 }
 
 .flex.center {
-  align-content: center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -182,7 +198,7 @@ h3 {
 
 .theme.checker-bg::before {
   background-image:
-    url(/src/assets/images/checker-pattern-SIMPLE.jpg),
+    var(--checker-bg),
     linear-gradient(to right, black, white, black);
   opacity: .15;
   mix-blend-mode: multiply;
@@ -208,14 +224,36 @@ h3 {
 }
 
 .theme.glass-bg::before {
-  background-image: url(/src/assets/images/Card-Base-Texture.jpg), linear-gradient(to bottom, silver, black);
+  background-image: var(--glass-bg), linear-gradient(to bottom, silver, black);
   background-size: 500px;
   background-blend-mode: multiply;
   mix-blend-mode: overlay;
   opacity: .5;
 }
 
+/* ----< PURPLE GLASS >---- */
+
+.theme.purple-glass {
+  background-color: #4a2d53;
+  background-image: linear-gradient(
+    to right, 
+    rgba(0, 0, 0, .75), 
+    silver,
+      rgba(0, 0, 0, .75)
+  );
+  background-blend-mode: overlay;
+}
+
+.theme.purple-glass::before {
+  background-image: var(--glass-bg), radial-gradient(white, black);
+  background-blend-mode: multiply;
+  mix-blend-mode: soft-light;
+  opacity: .15;
+  background-size: contain;
+}
+
 /* ====== IMAGES ====== */
+
 
 
 /* ====== BANNERS ====== */

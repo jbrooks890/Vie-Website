@@ -3,12 +3,24 @@ section {
   box-sizing: border-box;
 }
 
-section:not(.full-width):not(.with-banner){
+section:not(.wide):not(.with-banner){
   max-width: calc(var(--grid)*32);
 }
 
-.flex section:not(.full-width):not(.with-banner) {
+.flex section:not(.wide):not(.with-banner) {
   align-self: center;
+}
+
+section.landing {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section.wide {
+  width: 100vw;
+  /* border: 1px solid coral; */
+  box-shadow: 0 0 10px var(--drop-shadow);
 }
 
 section.with-banner {
