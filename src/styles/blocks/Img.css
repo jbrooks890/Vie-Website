@@ -1,6 +1,7 @@
 img {
   display: inline-block;
   /* width: 100%; */
+  transition: .2s ease-out;
 }
 
 img.lightbox {
@@ -17,4 +18,13 @@ img.cover {
 
 img.contain {
   object-fit: contain
+}
+
+/* ====================================== **
+|| HOVER
+** ====================================== */
+@media (hover:hover) {
+  img.lightbox:not(.modal img):hover {
+    transform: scale(1.01);
+  }
 }
