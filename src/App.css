@@ -37,17 +37,20 @@
   --numFont: Bernard-MT-Condensed;
   --bodyFont: Abel;
   /* --------------------------- */
-  /* font-family: var(--bodyFont); */
   font-size: 21px;
   /* ---------- BORDERS ---------- */ 
   --outside: 10px;
   --inside: 5px;
+  /* ---------- PADDING ---------- */
+
   /* ---------- GRAPHICS ---------- */
   --checker-bg: url(/src/assets/images/checker-pattern-SIMPLE.jpg);
   --glass-bg: url(/src/assets/images/Card-Base-Texture.jpg);
   /* ---------- HEADER ---------- */
   --header-size: 5rem;
 }
+
+* {box-sizing: border-box;}
 
 body {
   margin: 0;
@@ -60,7 +63,7 @@ body {
 
 #siteWrapper {
   min-height: 100vh;
-  box-sizing: border-box;
+  ;
   /* border: 1px solid red; */
   padding-bottom: 10rem;
 }
@@ -126,6 +129,20 @@ h3 {
 em {
   font-style: normal;
   color: var(--pop);
+}
+
+button {
+  cursor: pointer;
+  appearance: none;
+  padding: 0;
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
 
 /* ====== FLEX ====== */

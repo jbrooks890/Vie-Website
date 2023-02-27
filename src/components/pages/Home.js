@@ -10,25 +10,25 @@ import Img from "../frags/Img";
 export default function Home() {
   const [postContent, setPostContent] = useState("");
 
-  const fetchMd = () => {
-    import("../../assets/text/test.md")
+  const fetchMd = path => {
+    // import("../../assets/text/test.md")
+    let content;
+    import(path)
       .then(res =>
         fetch(res.default)
           .then(res => res.text())
-          .then(res => setPostContent(res))
+          .then(res => (content = res))
           .catch(err => console.error(err))
       )
       .catch(err => console.error(err));
+
+    return content ?? null;
   };
 
-  useLayoutEffect(() => fetchMd(), []);
+  // useLayoutEffect(() => fetchMd(), []);
 
   return (
-    <Page
-      name="Home"
-      className="flex col"
-      // banner={require("../../assets/images/VIE-BG-3.jpg")}
-    >
+    <Page name="Home" className="flex col">
       <Section
         name="Welcome"
         type="index"
@@ -37,7 +37,7 @@ export default function Home() {
         <img
           src={require("../../assets/images/VIE-Logo2.png")}
           alt="vie-logo"
-          width="480px"
+          width={480}
           height={480}
           // style={{ height: "480px" }}
         />
@@ -68,6 +68,10 @@ export default function Home() {
                 help to accelerate gameplay. The enemy threat demands a more
                 urgent pace at times.
               </p>
+              {/* <Markdown>
+                {fetchMd("../../assets/text/pages/home/terrain.md")}
+              </Markdown> */}
+              <button>Learn More</button>
             </>
           }
         />

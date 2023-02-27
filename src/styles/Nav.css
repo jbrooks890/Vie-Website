@@ -5,11 +5,11 @@ nav {
   color: var(--pop);
   /* font-family: var(--numFont); */
   font-weight: 500;
-  box-sizing: border-box;
+  ;
   /* border: 1px solid orange; */
   border: 3px groove var(--pop);
   box-shadow: 5px px 5px var(--drop-shadow);
-  box-sizing: border-box;
+  ;
   border-radius: var(--outside);
 }
 

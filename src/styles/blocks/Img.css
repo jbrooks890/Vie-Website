@@ -26,5 +26,6 @@ img.contain {
 @media (hover:hover) {
   img.lightbox:not(.modal img):hover {
     transform: scale(1.01);
+    transition-delay: 1s;
   }
 }

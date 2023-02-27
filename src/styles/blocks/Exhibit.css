@@ -1,17 +1,9 @@
-.exhibit-block {
-  box-sizing: border-box;
-}
-
 .flex.col > .exhibit-block {
   align-self: center;
 }
 
 .exhibit-block:not(.flex.col .exhibit-block) {
   margin: 0 auto;
-}
-
-.exhibit-block > * {
-  box-sizing: border-box;
 }
 
 .exhibit-block.even > * {
